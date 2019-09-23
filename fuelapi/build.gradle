@@ -48,3 +48,6 @@ dependencies {
 
     testImplementation 'org.robolectric:robolectric:3.8'
 }
+repositories {
+    mavenCentral()
+}

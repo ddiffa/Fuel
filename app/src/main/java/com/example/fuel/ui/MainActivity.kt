@@ -1,7 +1,8 @@
-package com.example.fuel
+package com.example.fuel.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.fuel.R
 
 class MainActivity : AppCompatActivity() {
 
