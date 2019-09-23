@@ -2,7 +2,7 @@ package com.example.fuelapi.model
 
 import com.beust.klaxon.Json
 
-class Article(
+data class Article(
     @Json(name = "source") val source: Source,
     @Json(name = "author") val author: String,
     @Json(name = "title") val title: String,

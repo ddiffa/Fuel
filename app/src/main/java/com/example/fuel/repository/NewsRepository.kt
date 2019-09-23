@@ -7,6 +7,7 @@ import com.example.fuel.base.BaseRepository
 import com.example.fuel.room.dao.NewsDao
 import com.example.fuel.room.entity.NewsEntity
 import com.example.fuelapi.Api
+import com.orhanobut.logger.Logger
 import org.kodein.di.generic.instance
 
 class NewsRepository(private val context: Context) :
@@ -24,6 +25,8 @@ class NewsRepository(private val context: Context) :
                 val (data, error) = result
                 if (data != null) {
                     newsDao.updateNewsList(NewsEntity.fromNewsList(data))
+                } else {
+                    Logger.e(error?.response?.url.toString())
                 }
             }
         })

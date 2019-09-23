@@ -10,7 +10,7 @@ class Api {
 
     private fun request(api: Fuel.RequestConvertible): Request {
 
-        return request(api).timeout(30000)
+        return Fuel.request(api).timeout(3000)
     }
 
     fun getNewsList() = request(NewsApi.NewsList()).liveDataObject(ArticleResponse.Deserializer())

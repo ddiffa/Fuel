@@ -8,7 +8,7 @@ internal sealed class NewsApi : FuelRouting {
     class NewsList : NewsApi()
 
 
-    override val basePath: String = "https://newsapi.org/"
+    override val basePath: String = "https://newsapi.org"
     override val headers: Map<String, String>? = null
     override val method: Method
         get() {
@@ -16,16 +16,21 @@ internal sealed class NewsApi : FuelRouting {
                 is NewsList -> return Method.GET
             }
         }
-    override val params: List<Pair<String, Any?>>? = null
+    override val params: List<Pair<String, Any?>>?
         get() {
-            when (this) {
-                is NewsList -> return field
+            return when (this) {
+                is NewsList -> listOf(
+                    "sources" to "techcrunch",
+                    "apiKey" to "efd67bbc1d024b32a17469d00124ec15"
+                )
             }
         }
     override val path: String
         get() {
-            when (this) {
-                is NewsList -> return "v2/top-headlines"
+            return when (this) {
+                is NewsList -> "/v2/top-headlines"
             }
         }
+
+
 }

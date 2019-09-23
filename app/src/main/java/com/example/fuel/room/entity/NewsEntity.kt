@@ -5,7 +5,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.fuelapi.model.Article
 import com.example.fuelapi.model.ArticleResponse
-import com.example.fuelapi.model.Source
 
 @Entity(tableName = "news_list")
 class NewsEntity {
@@ -21,8 +20,6 @@ class NewsEntity {
     var urlToImage: String = ""
     @ColumnInfo(name = "publishedAt")
     var publishedAt: String = ""
-    @ColumnInfo(name = "source")
-    var source: Source? = null
 
     fun fromNewsData(news: Article): NewsEntity {
         title = news.title
@@ -30,7 +27,6 @@ class NewsEntity {
         url = news.url
         urlToImage = news.urlToImage
         publishedAt = news.publishedAt
-        source = news.source
         return this
     }
 
