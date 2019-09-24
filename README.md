@@ -1,7 +1,4 @@
-# Kotlin-Fuel-MVVM-Template
-
-In this project I use these stuff :
-* Kotlin
+# Kotlin-Fuel-MVVM
 * [Kodein-DI](https://github.com/Kodein-Framework/Kodein-DI) (For dependency injection)
 * [Fuel](https://fuel.gitbook.io/documentation/) -> Fuel is a HTTP networking library for Kotlin/Android. Http GET JSON and Deserialize to Array of Class Instances
  
